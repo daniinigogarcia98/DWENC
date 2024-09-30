@@ -1,0 +1,30 @@
+Este código JavaScript crea una galería de imágenes con botones que, al hacer clic en ellos, muestran imágenes aleatorias de personas. A continuación, te explico paso a paso lo que hace cada parte del código:
+
+Sección 1: Selección de elementos y creación de elementos
+
+    Selecciona dos elementos HTML con clase container y gallery utilizando document.querySelector.
+    Crea un nuevo elemento div secundario para los botones utilizando document.createElement.
+
+Sección 2: Asignación de clases y estructura
+
+    Asigna la clase gallery al elemento divGallery.
+    Agrega el elemento divGallery como hijo del elemento divContainer.
+    Asigna la clase gallery al elemento divSecundario.
+    Agrega el elemento divSecundario como hijo del elemento divContainer.
+
+Sección 3: Botón agregar
+
+    Selecciona el botón con id boton-agregar utilizando document.querySelector.
+    Agrega un evento click al botón que llama a la función agregarBoton.
+    La función agregarBoton verifica si se han creado menos de 4 botones. Si es así, crea un nuevo botón, lo agrega al elemento divGallery y asigna un evento click al botón que llama a la función botonClick. Si se han creado 4 botones, deshabilita el botón agregar.
+
+Sección 4: Función botonClick
+
+    La función botonClick se llama cuando se hace clic en un botón.
+    Genera un número aleatorio de imágenes a mostrar entre 1 y 10.
+    Crea un bucle que itera numImagen veces y crea un nuevo elemento img en cada iteración.
+    Asigna una imagen aleatoria de una persona (hombre o mujer) al elemento img utilizando la API de Random User.
+    Agrega el elemento img al elemento divSecundario.
+    Asigna un evento click al elemento img que agrega una clase ponerBorde al elemento img cuando se hace clic en él.
+
+En resumen, este código crea una galería de imágenes que se pueden agregar dinámicamente haciendo clic en un botón. Cada botón agrega una imagen aleatoria de una persona y se pueden agregar hasta 4 botones. Cuando se hace clic en una imagen, se agrega un borde alrededor de ella.

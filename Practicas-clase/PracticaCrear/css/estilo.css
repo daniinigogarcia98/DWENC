@@ -1,0 +1,25 @@
+.contenedorPrincipal{
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+.contenedorsecundario{
+    background-color: lightcoral;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+}
+.botonx{
+    background-color: lightgreen;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+.botonx:hover{
+    background-color: green;
+    color: white;
+}

@@ -1,0 +1,71 @@
+// Seleccionamos los elementos del DOM que vamos a utilizar
+const container = document.querySelector(".container");
+const gallery = document.querySelector(".gallery");
+const gallery2 = document.createElement("div"); // Creamos un nuevo elemento div para la segunda galería
+gallery.className = "gallery"; // Asignamos la clase "gallery" al elemento gallery
+container.appendChild(gallery) // Agregamos el elemento gallery al contenedor
+gallery2.className = "gallery"; // Asignamos la clase "gallery" al elemento gallery2
+container.appendChild(gallery2) // Agregamos el elemento gallery2 al contenedor
+
+// Seleccionamos el botón que vamos a utilizar para agregar botones
+const botonAgregar = document.querySelector("#boton-agregar");
+let botonesCreados = 0; // Inicializamos un contador para los botones creados
+
+// Agregamos un evento de clic al botón para agregar botones
+botonAgregar.addEventListener("click", agregarBoton);
+
+// Función para agregar botones
+function agregarBoton() {
+    // Verificamos si se han creado menos de 4 botones
+    if (botonesCreados < 4) {
+        // Incrementamos el contador de botones creados
+        botonesCreados++;
+        // Creamos un nuevo botón
+        const boton = document.createElement("button");
+        // Asignamos el texto al botón
+        boton.innerText = "Botón " + botonesCreados;
+        // Asignamos la clase "boton" al botón
+        boton.className = "boton";
+        // Agregamos el botón a la galería
+        gallery.appendChild(boton);
+        // Agregamos un evento de clic al botón para mostrar imágenes
+        boton.addEventListener("click", botonClick);
+        // Mostramos información en la consola para debugging
+        console.log(boton);
+        console.log(botonesCreados);
+        console.log(gallery);
+        console.log(gallery2);
+    } else {
+        // Si se han creado 4 botones, deshabilitamos el botón de agregar botones
+        botonAgregar.disabled = true;
+        // Cambiamos el texto del botón de agregar botones
+        botonAgregar.innerText = "Agregar Botón";
+        // Reinicializamos el contador de botones creados
+        botonesCreados = 0;
+    }
+}
+
+// Función para mostrar imágenes al hacer clic en un botón
+function botonClick() {
+    // Generamos un número aleatorio de imágenes a mostrar
+    const numImagenes = Math.floor(Math.random() * 10) + 1;
+    // Creamos un bucle para mostrar las imágenes
+    for (let i = 0; i < numImagenes; i++) {
+        // Creamos un nuevo elemento img
+        const imagen = document.createElement("img");
+        // Generamos un género aleatorio (hombre o mujer)
+        const genero = Math.random() < 0.5 ? "men" : "women";
+        // Construimos la URL de la imagen
+        const urlfoto = "https://randomuser.me/api/portraits/" + genero + "/" + Math.floor(Math.random() * 100) + ".jpg";
+        // Asignamos la URL a la imagen
+        imagen.src = urlfoto;
+        // Asignamos el texto alternativo a la imagen
+        imagen.alt = "Foto";
+        // Agregamos la imagen a la segunda galería
+        gallery2.appendChild(imagen);
+        // Mostramos información en la consola para debugging
+        console.log(imagen);
+        console.log(gallery2);
+        console.log(boton);
+    }
+}

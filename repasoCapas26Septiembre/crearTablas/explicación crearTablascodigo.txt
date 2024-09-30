@@ -1,0 +1,30 @@
+lo que hace este código:
+
+Variables y eventos
+
+    Se crea una variable tabla y se inicializa en null.
+    Se agrega un evento click al botón con id btnTablas que llama a la función crearTablas cuando se hace clic en él.
+    Se agrega un evento click al botón con id btnImagenes que llama a la función crearTablaConColores cuando se hace clic en él.
+
+Función crearTablas
+
+    La función crearTablas se encarga de crear una tabla con botones que tienen colores aleatorios.
+    Pide al usuario que ingrese el número de filas y columnas que desea en la tabla mediante prompt.
+    Crea una tabla con el número de filas y columnas especificadas y le asigna un borde de 2px de ancho y color negro.
+    Crea un bucle que itera sobre las filas y columnas de la tabla y, para cada celda, crea un botón con las siguientes características:
+        Un color de fondo aleatorio seleccionado de un array de colores (red, green, blue, etc.).
+        Un ancho mínimo de 100px y un alto mínimo de 50px.
+        Un tamaño de fuente de 24px.
+        establecemos una variable con el texto de los colores seleccionados en español que se mostrara en el alert al hacer clic en el botón.
+        Un texto vacío.
+        Un evento click que, cuando se hace clic en el botón, muestra un mensaje con el color del fondo del botón.
+    Finalmente, agrega la tabla al body del documento.
+
+Función crearTablaConColores
+
+    La función crearTablaConColores se encarga de cambiar los colores de fondo de los botones de la tabla existente.
+    Verifica si la tabla existe (si tabla es diferente de null). Si no existe, muestra un mensaje de alerta y sale de la función.
+    Crea un array de colores y itera sobre las celdas de la tabla existente.
+    Para cada celda, selecciona un color aleatorio del array y lo asigna como color de fondo del botón que se encuentra en esa celda.
+
+En resumen, este código crea una tabla con botones que tienen colores aleatorios y que, al hacer clic en ellos, muestran un mensaje con el color del fondo. También permite cambiar los colores de fondo de los botones de la tabla existente.
