@@ -54,7 +54,7 @@ function inicio(){
         contenedorProducto.appendChild(pFruta);
         //precio
         const pPrecioFruta = document.createElement('p');
-        pPrecioFruta.textContent = precios[i];
+        pPrecioFruta.textContent = "Precio:"+precios[i]+"€"
         contenedorProducto.appendChild(pPrecioFruta);
          //precio Parcial
          const precioParcial=document.createElement('p')
@@ -106,5 +106,12 @@ precio.textContent="Total= "+precioTotal+ " €"
 
 
 function eliminarProductoCesta(objetoEliminar){
-   alert(objetoEliminar.target);
+    //borrar la fila que contiene el producto a eliminar
+    objetoEliminar.target.parentNode.parentNode.remove();
+    //restar el precio parcial del total
+    precioTotal-=parseInt(objetoEliminar.target.parentNode.parentNode.cells[3].textContent.slice(0,-
+        3));
+    //resetear el total
+    precio.textContent="";
+    precio.textContent="Total= "+''+ " €"
 }

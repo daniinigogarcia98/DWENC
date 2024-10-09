@@ -1,0 +1,9 @@
+  <!-- Bootstrap CSS -->
+la carpeta css en la raíz del proyecto
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+la carpeta js en la raíz del proyecto
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
