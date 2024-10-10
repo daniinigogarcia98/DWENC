@@ -39,7 +39,7 @@ function inicio(){
     for(let i=0;i<imagenes.length;i++){
        //contenedor de fondo gris : imágenes, precio y nombrs
         const contenedorProducto  = document.createElement('div');
-        contenedorProducto.style.backgroundColor = "grey";
+        contenedorProducto.style.backgroundColor = "lightgrey";
         //Dentro de contenedorProducto creamos las imagenes,precio y nombres
         galeria.appendChild(contenedorProducto);
         let imgFruta = document.createElement('img');
