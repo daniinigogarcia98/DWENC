@@ -54,7 +54,7 @@ function inicio(){
         contenedorProducto.appendChild(pFruta);
         //precio
         const pPrecioFruta = document.createElement('p');
-        pPrecioFruta.textContent = "Precio:"+precios[i]+"€"
+        pPrecioFruta.textContent = "Precio:"+" "+precios[i]+"€"
         contenedorProducto.appendChild(pPrecioFruta);
          //precio Parcial
          const precioParcial=document.createElement('p')
