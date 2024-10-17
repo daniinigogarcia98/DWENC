@@ -46,7 +46,9 @@ function inicio(){
         imgFruta.setAttribute("src",imagenes[i]);
         imgFruta.setAttribute("alt",nombres[i]);
         //imgFruta.setAttribute("value",precios[i]);
+        //importante flujo de informacion del panel superior a la tabla
         imgFruta.value=precios[i];
+        //imgFruta.value=[nombres[i],precios[i],imagenes[i]];
         contenedorProducto.appendChild(imgFruta);
         //Creamos un parrafo para introducir nombre y precio
         const pFruta= document.createElement('p');
@@ -68,7 +70,7 @@ function inicio(){
 
 function comprar(objetoimg){
     //mensaje emergente para añadir peso
-let peso=prompt("teclea el peso de "+objetoimg.target.alt)
+let peso=prompt("teclea el peso de "+objetoimg.target.alt);
 //crear una nueva fila (tr) de la tabla con el nuevo producto (añadir a carrito)
 const fila=document.createElement("tr");
 carrito.appendChild(fila);
@@ -107,7 +109,8 @@ precio.textContent="Total= "+precioTotal+ " €"
 
 function eliminarProductoCesta(objetoEliminar){
     //borrar la fila que contiene el producto a eliminar
-    objetoEliminar.target.parentNode.parentNode.remove();
+    let filaX=objetoEliminar.target.parentNode.parentNode;
+    filaX.remove();
     //restar el precio parcial del total
     precioTotal-=parseInt(objetoEliminar.target.parentNode.parentNode.cells[3].textContent.slice(0,-
         3));
