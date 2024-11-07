@@ -3,71 +3,66 @@ const cajaPrincipal = document.querySelector(".container");
 const btnKms = document.querySelector("#ord_kms");
 const btnMarca = document.querySelector("#ord_marca");
 const btnConsumo = document.querySelector("#ord_consumo");
-const btnkms2 = document.querySelector("#ord_kms2");
-const btnMarca2 = document.querySelector("#ord_marca2");
-const btnConsumo2 = document.querySelector("#ord_consumo2");
-//construyo el array que va a contener el fichero json
+let ordenKmsAscendente = true;
+let ordenMarcaAscendente = true;
+let ordenConsumoAscendente = true;
+
+// Array que contiene los datos de coches
 const coches = [];
+
 function inicio() {
-  //volcado del json a data
+  // Cargar los datos JSON
   fetch("coches.json")
     .then((response) => response.json())
     .then((data) => cargar(data));
 }
-function cargar(data) {
-  //pasar de data a un array
-  const cochesContainer = document.querySelector(".container");
 
-  //cargar desde el json hasta un array
+function cargar(data) {
+  // Volcar el JSON a la variable coches
   data.forEach((coche) => {
     coches.push(coche);
   });
-  //filtrar
-  btnKms.onclick = ordenarPorKms;
-  btnMarca.onclick = ordenarPorMarca;
-  btnConsumo.onclick = ordenarPorConsumo;
-  btnkms2.onclick = ordenarPorKms2;
-  btnMarca2.onclick = ordenarPorMarca2;
-  btnConsumo2.onclick = ordenarPorConsumo2;
+
+  btnKms.onclick = () => ordenarPorKms();
+  btnMarca.onclick = () => ordenarPorMarca();
+  btnConsumo.onclick = () => ordenarPorConsumo();
 }
+
+// Funciones de ordenación
 function ordenarPorKms() {
-  const listadoOrdenadoKms = coches.slice().sort((a, b) => a.kms - b.kms);
+  const listadoOrdenadoKms = coches.slice().sort((a, b) => {
+    return ordenKmsAscendente ? a.kms - b.kms : b.kms - a.kms;
+  });
+  ordenKmsAscendente = !ordenKmsAscendente; // Alternar el estado
+  btnKms.textContent = ordenKmsAscendente ? "Kms - +" : "Kms + -"; // Cambiar texto del botón
   mostrarListadoOrdenado(listadoOrdenadoKms);
 }
+
+function ordenarPorMarca() {
+  const listadoOrdenadoMarca = coches.slice().sort((a, b) => {
+    return ordenMarcaAscendente
+      ? a.marca.localeCompare(b.marca)
+      : b.marca.localeCompare(a.marca);
+  });
+  ordenMarcaAscendente = !ordenMarcaAscendente; // Alternar el estado
+  btnMarca.textContent = ordenMarcaAscendente ? "Marca - +" : "Marca + -"; // Cambiar texto del botón
+  mostrarListadoOrdenado(listadoOrdenadoMarca);
+}
+
 function ordenarPorConsumo() {
-  const listadoOrdenadoConsumo = coches
-    .slice()
-    .sort((a, b) => a.consumo - b.consumo);
+  const listadoOrdenadoConsumo = coches.slice().sort((a, b) => {
+    return ordenConsumoAscendente
+      ? a.consumo - b.consumo
+      : b.consumo - a.consumo;
+  });
+  ordenConsumoAscendente = !ordenConsumoAscendente; // Alternar el estado
+  btnConsumo.textContent = ordenConsumoAscendente
+    ? "Consumo - +"
+    : "Consumo + -"; // Cambiar texto del botón
   mostrarListadoOrdenado(listadoOrdenadoConsumo);
 }
-function ordenarPorMarca() {
-  const listadoOrdenaPorMarca = coches
-    .slice()
-    .sort((a, b) => a.marca.localeCompare(b.marca));
-  mostrarListadoOrdenado(listadoOrdenaPorMarca);
-}
-function ordenarPorKms2() {
-  const listadoOrdenadoKms2 = coches
-    .slice()
-    .sort((a, b) => a.kms - b.kms)
-    .reverse();
-  mostrarListadoOrdenado(listadoOrdenadoKms2);
-}
-function ordenarPorMarca2() {
-  const listadoOrdenadoMarca2 = coches
-    .slice()
-    .sort((a, b) => a.marca.localeCompare(b.marca))
-    .reverse();
-  mostrarListadoOrdenado(listadoOrdenadoMarca2);
-}
-function ordenarPorConsumo2() {
-  const listadoOrdenadoConsumo2 = coches
-    .slice()
-    .sort((a, b) => a.consumo - b.consumo)
-    .reverse();
-  mostrarListadoOrdenado(listadoOrdenadoConsumo2);
-}
-//mostrar la lista lista ordenada
+
+// Función para mostrar la lista ordenada
 function mostrarListadoOrdenado(coches) {
   limpiarCaja();
   if (coches.length > 0) {
@@ -89,6 +84,8 @@ function mostrarListadoOrdenado(coches) {
     });
   }
 }
+
+// Limpiar el contenido de la caja
 function limpiarCaja() {
   while (cajaPrincipal.firstElementChild) {
     cajaPrincipal.removeChild(cajaPrincipal.firstElementChild);
