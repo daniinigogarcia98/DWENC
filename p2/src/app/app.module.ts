@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { PieComponent } from './pie/pie.component';
+import { SumadorRestadorComponent } from './sumador-restador/sumador-restador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
-    PieComponent
+    PieComponent,
+    SumadorRestadorComponent
   ],
   imports: [
     BrowserModule,
