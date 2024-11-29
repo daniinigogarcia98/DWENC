@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+   <div class="col-auto">
+    <h3> {{title}}</h3>
+    <label for="euros">Euros:</label><br>
+      <input [(ngModel)]="euros"  type="number" (keyup)="actualizarEuros()" (change)="actualizarEuros()"><br>
+      <label for="dolares">Dolares:</label><br>
+      <input [(ngModel)]="dolares" type="number" (keyup)="actualizarDolares()"(change)="actualizarDolares()"><br>
+      <label for="libras">Libras:</label><br>
+      <input [(ngModel)]="libras" type="number" (keyup)="actualizarLibras()" (change)="actualizarLibras()"><br>
+      <label for="yenes">Yenes:</label><br>
+      <input [(ngModel)]="yenes"  type="number" (keyup)="actualizarYenes()" (change)="actualizarYenes()"><br>
+      <button (click)="limpiar()">Limpiar</button><br>
+   </div>
+  </div>
+</div>

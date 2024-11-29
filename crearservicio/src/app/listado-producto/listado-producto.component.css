@@ -1,0 +1,23 @@
+table{
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  width: 100%;
+}
+thead{
+  background-color: #007bff;
+}
+tbody{
+  background-color: #f8f9fa;
+}
+th{
+  padding: 10px;
+}
+td{
+  padding: 10px;
+}
+img{
+  width: 100px;
+  height: 100px;
+}

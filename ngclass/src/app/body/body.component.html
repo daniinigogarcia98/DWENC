@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="text-center">
+    <h2>Ejemplo de ngClass con Select</h2>
+
+    <div class="form-group">
+      <label for="color">Selecciona un color:</label>
+      <select [(ngModel)]="textoColor" (ngModelChange)="cambioColor()" id="color" class="form-control">
+        <option value="" disabled>Seleccionar color</option>
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+        <option value="amarillo">Amarillo</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="size">Selecciona un tamaño de fuente:</label>
+      <select [(ngModel)]="tamanio" (ngModelChange)="cambioTamanio()" id="size" class="form-control">
+        <option value="" disabled>Selecciona un tamaño</option>
+        <option value="12">12 px</option>
+        <option value="16">16 px</option>
+        <option value="20">20 px</option>
+        <option value="24">24 px</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="back">Selecciona color de fondo:</label>
+      <select [(ngModel)]="colorFondo" (ngModelChange)="cambioBack()" id="back" class="form-control">
+        <option value="" disabled>Selecciona un color fondo</option>
+        <option value="bRojo">Back Rojo</option>
+        <option value="bVerde">Back Verde</option>
+        <option value="bAzul">Back Azul</option>
+        <option value="bAmarillo">Back Amarillo</option>
+      </select>
+    </div>
+
+    <div class="row mt-5 flex-box">
+      <p class="col-lg-3 m-2" [ngClass]="[claseColor, claseTamanio, claseBack]">
+         DESARROLLO DE APLICACIONES WEB.
+      </p>
+      <p class="col-lg-3 m-2" [ngClass]="[claseColor, claseTamanio, claseBack]">
+        DESARROLLO DE APLICACIONES MULTIPLATAFORMA.
+      </p>
+      <p class="col-lg-3 m-2" [ngClass]="[claseColor, claseTamanio, claseBack]">
+        ADMINISTRACIÓN DE SISTEMAS INFORMATICOS Y REDES.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.daniel {
+  color:black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  height: 50vh;
+  background-color: yellow;
+}
+
+.luis {
+  color: blue;
+  font-style: italic;
+  height: 80vh;
+  background-color: gold;
+}
+
+.juan {
+  color: blue;
+  text-decoration: underline;
+  font-size: 20px;
+  height: 150vh;
+  background-color: greenyellow;
+}
+
+.pedro {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  background-color: silver;
+  height: 90vh;
+}

@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <!-- Primera Parte: Botones e Imágenes -->
+  <div class="row text-center">
+    <!-- Columna de Botones -->
+    <div class="col-lg-4">
+      <button class="btn btn-danger custom-btn" (click)="activarChico()">Chico</button>
+      <button class="btn btn-primary custom-btn" (click)="activarChica()">Chica</button>
+    </div>
+
+    <!-- Columna de Imagen de Chica -->
+    <div class="col-lg-4">
+      <img [src]="imgChica" [width]="w1" [height]="h1" alt="Imagen de chica" class="custom-img">
+    </div>
+
+    <!-- Columna de Imagen de Chico -->
+    <div class="col-lg-4">
+      <img [src]="imgChico" [width]="w2" [height]="h2" alt="Imagen de chico" class="custom-img">
+    </div>
+  </div>
+
+  <!-- Segunda Parte: Botones con Temporizador e Imágenes -->
+  <div class="row text-center mt-4">
+    <!-- Columna de Botones con Temporizador -->
+    <div class="col-lg-4">
+      <button class="btn btn-danger custom-btn" (click)="activarChicoTemporizador()" [disabled]="activadoO">Chico</button>
+      <button class="btn btn-primary custom-btn" (click)="activarChicaTemporizador()" [disabled]="activadoA">Chica</button>
+    </div>
+
+    <!-- Columna de Imagen de Chica con Temporizador -->
+    <div class="col-lg-4">
+      <img [src]="imgChicaT" [width]="wT1" [height]="hT1" alt="Imagen de chica temporizador" class="custom-img">
+    </div>
+
+    <!-- Columna de Imagen de Chico con Temporizador -->
+    <div class="col-lg-4">
+      <img [src]="imgChicoT" [width]="wT2" [height]="hT2" alt="Imagen de chico temporizador" class="custom-img">
+    </div>
+  </div>
+</div>

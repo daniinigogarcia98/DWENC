@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="text-center">
+    <h3>Calculadora</h3>
+    <input type="number"[(ngModel)]="numero1"><br>
+    <input type="number"[(ngModel)]="numero2"><br>
+    <button (click)="sumar()" class="btn btn-info">Sumar</button><br>
+    <button (click)="restar()" class="btn btn-danger">Restar</button><br>
+    <button (click)="multiplicar()" class="btn btn-info">Multiplicar</button><br>
+    <button (click)="dividir()" class="btn btn-info">Dividir</button><br>
+    <br>
+    <table border="1 px solid black">
+      <tr>{{resultado}}</tr>
+    </table>
+  </div>
+</div>

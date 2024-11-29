@@ -1,0 +1,27 @@
+/* app.component.css */
+.container {
+  margin-top: 50px;
+}
+
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h3 {
+  text-align: center;
+}

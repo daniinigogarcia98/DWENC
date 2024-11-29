@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<div class="container">
+  <button (click)="AniadirFruta()">Añadir fruta *ngFor</button>
+<br>
+  <input _ngcontent-sce-c2="" type="text" [(ngModel)]="nombreFruta" placeholder="Escribe el nombre de la fruta" class="form-control ng-untouched ng-pristine ng-valid">
+  <p> Directivas [(ngModel)]: {{nombreFruta}} </p>
+  <ul *ngFor="let f of lista">
+    <li>{{f}}</li>
+  </ul>
+</div>

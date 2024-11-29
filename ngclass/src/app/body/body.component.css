@@ -1,0 +1,15 @@
+.rojo { color: red; }
+.azul { color: blue; }
+.verde { color: green; }
+.amarillo { color: yellow; }
+
+
+.tamanio-12 { font-size: 12px; }
+.tamanio-16 { font-size: 16px; }
+.tamanio-20 { font-size: 20px; }
+.tamanio-24 { font-size: 24px; }
+
+.bRojo { background-color: red; }
+.bVerde { background-color: green; }
+.bAzul { background-color: blue; }
+.bAmarillo { background-color: yellow; }

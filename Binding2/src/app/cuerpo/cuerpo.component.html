@@ -1,0 +1,49 @@
+<div class="container mt-5">
+
+  <div class="row text-center">
+
+    <div class="col-lg-6">
+      <p>{{Segundos}}</p>
+      <button class="btn btn-primary" (click)="cuentaAtras()" [disabled]="activarB">{{Textodeboton}}</button>
+    </div>
+    <div class="col-lg-6">
+      <div [style.background-color]="color" [style.font-size]="tamanioF">
+        <p>Desarrollo Web entorno cliente</p>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <ul *ngFor="let persona of personas;let indice = index">
+        <li (mouseover)="verEdad(indice)" (mouseleave)="verNombre()">{{indicehover === indice ? persona.edad : persona.nombre }}</li>
+        </ul>
+    </div>
+  </div>
+  <!-- fila 2 -->
+  <div class="row">
+
+    <div class="col-lg-6">
+      <h2>Periódicos Digitales</h2>
+      <ul class="list-group">
+        <li *ngFor="let periodico of periodicos">
+          <a
+            [href]="periodico.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            (mouseover)="onMouseOver(periodico)"
+            (mouseleave)="onMouseLeave(periodico)"
+          >
+            {{ periodico.displayName }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="col-lg-6">
+
+    </div>
+
+
+    <div class="col-lg-6">
+
+    </div>
+  </div>

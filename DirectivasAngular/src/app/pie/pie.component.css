@@ -1,0 +1,11 @@
+.container {
+  background-color:lightblue;
+  height: 30vh;
+}
+.text-center {
+  text-align: center;
+}
+
+.fecha {
+  background-color: deepskyblue;
+}

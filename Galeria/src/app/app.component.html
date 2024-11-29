@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <h2>Galería</h2>
+      <img [src]="imagenes[imagenActual]" [width]="imagenAncho" alt="Imagen de perfil">
+      <div>
+        <button class="btn btn-info" (click)="anterior()">Anterior</button>
+        <button class="btn btn-info" (click)="siguiente()">Siguiente</button>
+        <button class="btn btn-info" (click)="aumentar()">Aumentar</button>
+        <button class="btn btn-info" (click)="disminuir()">Disminuir</button>
+        <button *ngIf="!galeriaActiva" class="btn btn-success" (click)="play()">Play</button>
+        <button *ngIf="galeriaActiva" class="btn btn-danger" (click)="stop()">Stop</button>
+      </div>
+    </div>
+  </div>
+</div>
