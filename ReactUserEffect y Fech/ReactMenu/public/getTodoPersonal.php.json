@@ -1,0 +1,90 @@
+[
+    {
+        "id": 9,
+        "nombre": "Manel",
+        "direccion": "sin casa",
+        "cargo": "de baja",
+        "edad": 32,
+        "imagen": "df"
+    },
+    {
+        "id": 1,
+        "nombre": "salao",
+        "direccion": "Republica",
+        "cargo": "bih jose pedro",
+        "edad": 12,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/39.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "alvaro",
+        "direccion": "san jose,4",
+        "cargo": "director",
+        "edad": 18,
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "sdf",
+        "direccion": "sdfs",
+        "cargo": "fsfsa",
+        "edad": 123,
+        "imagen": "sdfas"
+    },
+    {
+        "id": 123,
+        "nombre": "Juan Pedro",
+        "direccion": "256, Olive Street, NY\t",
+        "cargo": "Desarrollador Back-End",
+        "edad": 23,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/42.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Mark Boucher",
+        "direccion": "256, Olive Street, NY",
+        "cargo": "Techbical Assistance",
+        "edad": 23,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/43.jpg"
+    },
+    {
+        "id": 36,
+        "nombre": "Roberto",
+        "direccion": "690",
+        "cargo": "Alumno",
+        "edad": 25,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/3.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Luismi Alcalde",
+        "direccion": "San Pedro, 4",
+        "cargo": "concejal",
+        "edad": 34,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/53.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Conor Mcgregor",
+        "direccion": "Sal Sipuedes, 3",
+        "cargo": "CEO",
+        "edad": 35,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/40.jpg"
+    },
+    {
+        "id": 294,
+        "nombre": "Mark Boucher",
+        "direccion": "San Pedro, 4",
+        "cargo": "Analista",
+        "edad": 22,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/71.jpg"
+    },
+    {
+        "id": 46,
+        "nombre": "Luismi Alcalde",
+        "direccion": "256, Olive Street, NY",
+        "cargo": "Analista",
+        "edad": 44,
+        "imagen": "https:\/\/randomuser.me\/api\/portraits\/men\/42.jpg"
+    }
+]
