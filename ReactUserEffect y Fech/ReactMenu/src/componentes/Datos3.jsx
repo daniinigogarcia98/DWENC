@@ -33,6 +33,7 @@ const Datos3 = () => {
         <thead>
           <tr>
             <th>ID</th>
+            <th>Nombre</th>
             <th>Direccion</th>
             <th>Cargo</th>
             <th>Edad</th>
@@ -43,6 +44,7 @@ const Datos3 = () => {
           {personal.map((personal, index) => (
             <tr key={index}>
                 <td>{personal.id}</td>
+                <td>{personal.nombre}</td>
                 <td>{personal.direccion}</td>
                 <td>{personal.cargo}</td>
                 <td>{personal.edad}</td>
