@@ -48,7 +48,13 @@ const Datos3 = () => {
                 <td>{personal.direccion}</td>
                 <td>{personal.cargo}</td>
                 <td>{personal.edad}</td>
-                <td>{personal.imagen}</td>
+                <td>
+                  {personal.imagen ? (
+                    <img src={personal.imagen} alt={personal.nombre} style={{ width: '100px', height: 'auto' }} />
+                  ) : (
+                    <span>No disponible</span>
+                  )}
+                </td>
             </tr>
           ))}
         </tbody>

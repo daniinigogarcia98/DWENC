@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-const url = "/getImagenes.php.json";  
+const url = "/coches.json";  
 
-const Datos0 = () => {
-  const [imagenes, setImagenes] = useState([]);
+const Datos4 = () => {
+  const [vehiculos, setVehiculos] = useState([]);
   const [cargando, setCargando] = useState(true);  
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const Datos0 = () => {
       try {
         const response = await fetch(url); 
         const result = await response.json();  
-        setImagenes(result);
+        setVehiculos(result); 
       } catch (error) {
         console.error("Error al obtener los datos:", error);
       } finally {
@@ -32,23 +32,25 @@ const Datos0 = () => {
       <table className="table">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Imagen</th>
-            <th>Texto</th>
-            <th>Subtexto</th>
-            <th>Activo</th>
+            <th>Color</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Consumo</th>
+            <th>Precio</th>
+            <th>Kms</th>
+            <th>Tipo Motor</th>
           </tr>
         </thead>
         <tbody>
-          {imagenes.map((vehiculo, index) => (
+          {vehiculos.map((vehiculo, index) => (
             <tr key={index}>
-              <td>{vehiculo.id}</td>
-              <td>
-                <img src={vehiculo.imagen} alt={vehiculo.texto} style={{ width: '100px', height: 'auto' }} />
-              </td>
-              <td>{vehiculo.texto}</td>
-              <td>{vehiculo.subtexto}</td>
-              <td>{vehiculo.activo}</td>
+              <td>{vehiculo.color}</td>
+              <td>{vehiculo.marca}</td>
+              <td>{vehiculo.modelo}</td>
+              <td>{vehiculo.consumo}</td>
+              <td>{vehiculo.precio}</td>
+              <td>{vehiculo.kms}</td>
+              <td>{vehiculo.tipoMotor}</td>
             </tr>
           ))}
         </tbody>
@@ -57,4 +59,4 @@ const Datos0 = () => {
   );
 };
 
-export default Datos0;
+export default Datos4;
