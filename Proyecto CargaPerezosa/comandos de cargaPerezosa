@@ -1,0 +1,18 @@
+---------------------------------------
+arrancar proyecto Angular
+---------------------------------------
+ng serve -o
+---------------------------------------
+crear proyecto con routing
+---------------------------------------
+ng new ProyectoCargaPerezosaPrincipal --routing
+---------------------------------------
+crear los modulos de los proyectos con routing
+---------------------------------------
+ng g m proyecto1 --routing
+---------------------------------------
+crear componente menu este sera el principal(modificar app.component.html y poner app-menu una vez creado)
+---------------------------------------
+ng g c menu
+----------------------------------------
+quitar de los proyectos que copiemos app-routing.module.ts y app.module.ts y renombrar el resto como app.component.css y app.component.html al nombre que toca y si el proyecto tiene componentes extras no se tocan se importan al proyectox.module.ts 
